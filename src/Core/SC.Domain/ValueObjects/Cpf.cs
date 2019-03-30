@@ -2,10 +2,11 @@ using System;
 
 namespace SC.Domain.ValueObjects
 {
-    public sealed class Cpf : ValueObject<Cpf>
+    public  class Cpf : ValueObject<Cpf>
     {
         public decimal Value { get; private set; }
 
+        protected Cpf() { }
         public Cpf(string value)
         {
             var valueFormt = (value ?? string.Empty).Replace(".", "").Replace("/", "").Replace("-", "");

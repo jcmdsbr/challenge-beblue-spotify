@@ -2,9 +2,10 @@ using System;
 using System.Globalization;
 
 namespace SC.Domain.ValueObjects {
-    public sealed class Amount : ValueObject<Amount> {
+    public  class Amount : ValueObject<Amount> {
         public decimal Value { get; private set; }
 
+        protected Amount () { }
         public Amount (decimal value) {
             Value = value;
         }
@@ -14,7 +15,7 @@ namespace SC.Domain.ValueObjects {
         }
 
         public override string ToString () {
-            return string.Format(CultureInfo.GetCultureInfo ("pt-BR"), "{0:C}", Value);
+            return string.Format (CultureInfo.GetCultureInfo ("pt-BR"), "{0:C}", Value);
         }
 
         public static implicit operator string (Amount amount) {
@@ -22,8 +23,8 @@ namespace SC.Domain.ValueObjects {
         }
 
         public static implicit operator decimal (Amount amount) {
-            
-            if(amount is null) return default(decimal);
+
+            if (amount is null) return default (decimal);
 
             return amount.Value;
         }
