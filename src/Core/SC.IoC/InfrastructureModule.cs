@@ -7,8 +7,15 @@ using SC.Infrastructure;
 namespace SC.IoC {
     public static class InfrastructureModule {
         public static void RegisterDatabase (this IServiceCollection services, IConfiguration configuration) {
+            string assemblyName = typeof (SCContext).Namespace;
+            string dbConnectionString = configuration.GetConnectionString ("SqlConnection");
+            
             services.AddDbContext<SCContext> (options =>
-                options.UseSqlServer (configuration.GetConnectionString ("SqlConnection")));
+                options.UseSqlServer (dbConnectionString,
+                    optionsBuilder =>
+                    optionsBuilder.MigrationsAssembly (assemblyName)
+                )
+            );
         }
     }
 }
