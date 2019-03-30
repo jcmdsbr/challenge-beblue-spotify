@@ -8,6 +8,7 @@ namespace SC.IoC
     {
         public static void RegisterModules(this IServiceCollection services, IConfiguration configuration) 
         {
+            services.RegisterCommand();
             services.RegisterDatabase(configuration);
         }
     }

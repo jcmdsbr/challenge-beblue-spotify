@@ -1,7 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
-
-  <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+ <PropertyGroup>
+    <TargetFramework>netcoreapp2.1</TargetFramework>
   </PropertyGroup>
 
 <ItemGroup>
@@ -13,6 +12,8 @@
 
 <ItemGroup>
   <ProjectReference Include="..\SC.Infrastructure\SC.Infrastructure.csproj" />
+  <ProjectReference Include="..\SC.Bus\SC.Bus.csproj" />
+  <ProjectReference Include="..\SC.Application\SC.Application.csproj" />
 </ItemGroup>
 
 </Project>

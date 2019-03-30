@@ -22,6 +22,15 @@ namespace SC.Infrastructure
             modelBuilder.ApplyConfiguration(new PlaylistMap());
             modelBuilder.ApplyConfiguration(new SaleMap());
             modelBuilder.ApplyConfiguration(new SaleDetailMap());
+
+            // Init Seed
+            modelBuilder.Entity<Category>().HasData(
+                new Category(1,"POP"),
+                new Category(2,"MPB"),
+                new Category(3,"CLASSIC"),
+                new Category(4,"ROCK")
+            );
+            
             base.OnModelCreating(modelBuilder);
         }
     }

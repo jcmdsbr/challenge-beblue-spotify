@@ -2,6 +2,8 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SC.Application.Repository;
+using SC.Bus;
 using SC.Infrastructure;
 
 namespace SC.IoC {
@@ -16,6 +18,8 @@ namespace SC.IoC {
                     optionsBuilder.MigrationsAssembly (assemblyName)
                 )
             );
+            services.AddScoped<IMediatorHandler, InMemoryBus>();
+            services.AddScoped<IUnitOfWork,UnitOfWork>();
         }
     }
 }

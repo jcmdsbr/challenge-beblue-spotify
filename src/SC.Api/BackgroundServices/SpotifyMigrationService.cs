@@ -3,31 +3,33 @@ using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using SC.Bus;
+using SC.Domain.Commands.CreateNewPlaylist;
 
 namespace SC.Api.BackgroundServices
 {
     public class SpotifyMigrationService : IHostedService, IDisposable
     {
         private readonly ILogger _logger;
-
-        public SpotifyMigrationService(ILogger<SpotifyMigrationService> log)
+        private readonly IMediatorHandler _bus;
+        public SpotifyMigrationService(ILogger<SpotifyMigrationService> log, IMediatorHandler bus)
         {
             _logger = log;
+            _bus = bus;
         }
         public void Dispose()
         {
             
         }
 
-        public Task StartAsync(CancellationToken cancellationToken)
+        public async Task StartAsync(CancellationToken cancellationToken)
         {
             _logger.LogInformation("Serviço de migração de catalogos iniciado.");
 
-            //TODO => Executar comando aqui.
+            await _bus.Send(new CreateNewPlaylistCommand());
 
             _logger.LogInformation("Serviço de migração de catalogos concluido.");
-
-            return Task.CompletedTask;
+             
         }
 
         public  Task StopAsync(CancellationToken cancellationToken)

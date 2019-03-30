@@ -19,6 +19,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Core\SC.IoC\SC.IoC.csproj" />
+    <ProjectReference Include="..\Core\SC.Bus\SC.Bus.csproj" />
+    <ProjectReference Include="..\Core\SC.Domain\SC.Domain.csproj" />
   </ItemGroup>
 
 </Project>
