@@ -16,6 +16,7 @@ namespace SC.Api {
         }
         public IConfiguration Configuration { get; }
         public void ConfigureServices (IServiceCollection services) {
+            
             services.RegisterAspNet ();
 
             services.RegiterSwagger ();

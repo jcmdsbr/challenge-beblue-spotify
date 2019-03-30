@@ -16,7 +16,7 @@ namespace SC.Api.BackgroundServices
         }
         public void Dispose()
         {
-            throw new NotImplementedException();
+            
         }
 
         public Task StartAsync(CancellationToken cancellationToken)
@@ -27,7 +27,7 @@ namespace SC.Api.BackgroundServices
 
             _logger.LogInformation("Serviço de migração de catalogos concluido.");
 
-            throw new NotImplementedException();
+            return Task.CompletedTask;
         }
 
         public  Task StopAsync(CancellationToken cancellationToken)
