@@ -4,7 +4,7 @@ using SC.Infrastructure.Mappings;
 
 namespace SC.Infrastructure
 {
-    public class SCContext: DbContext
+    public class SCContext : DbContext
     {
         public SCContext(DbContextOptions<SCContext> options)
             : base(options)
@@ -13,7 +13,7 @@ namespace SC.Infrastructure
 
         public DbSet<Category> Categories { get; set; }
         public DbSet<Playlist> Playlists { get; set; }
-        public DbSet<Sale> Sales { get;  set; }
+        public DbSet<Sale> Sales { get; set; }
         public DbSet<SaleDetail> SalesDetail { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -25,12 +25,12 @@ namespace SC.Infrastructure
 
             // Init Seed
             modelBuilder.Entity<Category>().HasData(
-                new Category(1,"POP"),
-                new Category(2,"MPB"),
-                new Category(3,"CLASSIC"),
-                new Category(4,"ROCK")
+                new Category(1, "POP"),
+                new Category(2, "MPB"),
+                new Category(3, "CLASSIC"),
+                new Category(4, "ROCK")
             );
-            
+
             base.OnModelCreating(modelBuilder);
         }
     }

@@ -1,14 +1,17 @@
 namespace SC.Domain.ValueObjects
 {
-    public  class Name : ValueObject<Name>
+    public class Name : ValueObject<Name>
     {
-        public string Value { get; private set; }
+        protected Name()
+        {
+        }
 
-        protected Name() { }
         public Name(string value)
         {
             Value = value;
         }
+
+        public string Value { get; }
 
         public override string ToString()
         {

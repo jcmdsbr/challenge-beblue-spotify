@@ -1,14 +1,18 @@
-namespace SC.Domain.Models {
-    public class Category : IEntity<int> {
-        public int Id { get; private set; }
-        public string Description { get; private set; }
-
-        protected Category () {
-
+namespace SC.Domain.Models
+{
+    public class Category : IEntity<int>
+    {
+        protected Category()
+        {
         }
-        public Category (int id, string description) {
-            this.Id = id;
-            this.Description = description;
+
+        public Category(int id, string description)
+        {
+            Id = id;
+            Description = description;
         }
+
+        public string Description { get; }
+        public int Id { get; }
     }
 }

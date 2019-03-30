@@ -1,10 +1,9 @@
-using System;
 using System.Threading.Tasks;
 using SC.Application.Repository;
 
 namespace SC.Infrastructure
 {
-    public class UnitOfWork: IUnitOfWork
+    public class UnitOfWork : IUnitOfWork
     {
         private readonly SCContext _context;
 
@@ -24,4 +23,3 @@ namespace SC.Infrastructure
         }
     }
 }
-

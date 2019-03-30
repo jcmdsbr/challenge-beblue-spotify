@@ -2,16 +2,19 @@ using System;
 
 namespace SC.Domain.ValueObjects
 {
-    public  class Cpf : ValueObject<Cpf>
+    public class Cpf : ValueObject<Cpf>
     {
-        public decimal Value { get; private set; }
+        protected Cpf()
+        {
+        }
 
-        protected Cpf() { }
         public Cpf(string value)
         {
             var valueFormt = (value ?? string.Empty).Replace(".", "").Replace("/", "").Replace("-", "");
             Value = Convert.ToDecimal(valueFormt);
         }
+
+        public decimal Value { get; }
 
         public override string ToString()
         {

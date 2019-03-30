@@ -7,15 +7,17 @@ using SC.Domain.Models;
 
 namespace SC.Application.CommandHandlers
 {
-    public class CreateNewPlaylistCommandHandler : ICommandHandler<CreateNewPlaylistCommand, CreateNewPlaylistCommandResult>
+    public class
+        CreateNewPlaylistCommandHandler : ICommandHandler<CreateNewPlaylistCommand, CreateNewPlaylistCommandResult>
     {
         private readonly IReadOnlyRepository<Category> _categories;
         private readonly IWriteOnlyRepository<Playlist> _persistence;
-        public async Task<CreateNewPlaylistCommandResult> Handle(CreateNewPlaylistCommand request, CancellationToken cancellationToken)
+
+        public async Task<CreateNewPlaylistCommandResult> Handle(CreateNewPlaylistCommand request,
+            CancellationToken cancellationToken)
         {
             var categories = await _categories.List();
 
-              
 
             return new CreateNewPlaylistCommandResult();
         }

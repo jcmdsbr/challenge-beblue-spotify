@@ -1,12 +1,12 @@
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SC.Application.Repository;
+using SC.Domain.Models;
 
 namespace SC.Infrastructure
 {
-    public class WriteDbContext<TEntity> : IWriteOnlyRepository<TEntity> where TEntity : class, SC.Domain.Models.IEntity
+    public class WriteDbContext<TEntity> : IWriteOnlyRepository<TEntity> where TEntity : class, IEntity
     {
-
         protected readonly DbSet<TEntity> DbSet;
 
         public WriteDbContext(SCContext db)
@@ -16,7 +16,7 @@ namespace SC.Infrastructure
 
         public virtual async Task AddAsync(TEntity entity)
         {
-           await DbSet.AddAsync(entity);
+            await DbSet.AddAsync(entity);
         }
 
         public virtual async Task DeleteAsync(object id)

@@ -1,9 +1,9 @@
-using System;
 using System.Threading.Tasks;
+using SC.Domain.Models;
 
 namespace SC.Application.Repository
 {
-   public interface IWriteOnlyRepository<TEntity> where TEntity : SC.Domain.Models.IEntity
+    public interface IWriteOnlyRepository<TEntity> where TEntity : IEntity
     {
         // only allowed find the entity for update or delete
         Task<TEntity> FindAsync(object id);

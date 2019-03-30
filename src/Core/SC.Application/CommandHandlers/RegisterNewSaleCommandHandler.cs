@@ -1,3 +1,4 @@
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 using SC.Domain.Commands;
@@ -7,9 +8,10 @@ namespace SC.Application.CommandHandlers
 {
     public class RegisterNewSaleCommandHandler : ICommandHandler<RegisterNewSaleCommand, RegisterNewSaleCommandResult>
     {
-        public Task<RegisterNewSaleCommandResult> Handle(RegisterNewSaleCommand request, CancellationToken cancellationToken)
+        public Task<RegisterNewSaleCommandResult> Handle(RegisterNewSaleCommand request,
+            CancellationToken cancellationToken)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
     }
 }

@@ -1,6 +1,6 @@
 namespace SC.Domain.Commands.RegisterNewSale
 {
-    public class RegisterNewSaleCommandResult: CommandResult
+    public class RegisterNewSaleCommandResult : CommandResult
     {
         public RegisterNewSaleCommandResult(bool success, string message)
         {
