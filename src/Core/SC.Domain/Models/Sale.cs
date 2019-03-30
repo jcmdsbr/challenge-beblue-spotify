@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using SC.Domain.ValueObjects;
 namespace SC.Domain.Models {
-    public class Sale {
+    public class Sale : IEntity<Guid> {
         protected Sale () { }
         private Sale (Cpf customerCpf, List<SaleDetail> details) {
             this.Id = Guid.NewGuid ();

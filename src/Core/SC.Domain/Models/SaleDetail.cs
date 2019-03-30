@@ -3,7 +3,7 @@ using SC.Domain.ValueObjects;
 
 namespace SC.Domain.Models
 {
-    public class SaleDetail
+    public class SaleDetail : IEntity
     {
         public Guid SaleId { get; private set; }
         public Guid PlaylistId { get; private set; }

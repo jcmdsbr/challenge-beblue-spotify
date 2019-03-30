@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using SC.Domain.ValueObjects;
 
 namespace SC.Domain.Models {
-    public class Playlist {
+    public class Playlist : IEntity {
 
         public Guid Id { get; private set; }
         public int CategoryId { get; private set; }
