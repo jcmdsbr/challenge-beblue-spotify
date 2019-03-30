@@ -1,0 +1,16 @@
+/Users/jcmds/Projects/s-commerce/src/Core/SC.Domain/bin/Debug/netstandard2.0/SC.Domain.deps.json
+/Users/jcmds/Projects/s-commerce/src/Core/SC.Domain/bin/Debug/netstandard2.0/SC.Domain.dll
+/Users/jcmds/Projects/s-commerce/src/Core/SC.Domain/bin/Debug/netstandard2.0/SC.Domain.pdb
+/Users/jcmds/Projects/s-commerce/src/Core/SC.Domain/obj/Debug/netstandard2.0/SC.Domain.csproj.CoreCompileInputs.cache
+/Users/jcmds/Projects/s-commerce/src/Core/SC.Domain/obj/Debug/netstandard2.0/SC.Domain.AssemblyInfoInputs.cache
+/Users/jcmds/Projects/s-commerce/src/Core/SC.Domain/obj/Debug/netstandard2.0/SC.Domain.AssemblyInfo.cs
+/Users/jcmds/Projects/s-commerce/src/Core/SC.Domain/obj/Debug/netstandard2.0/SC.Domain.dll
+/Users/jcmds/Projects/s-commerce/src/Core/SC.Domain/obj/Debug/netstandard2.0/SC.Domain.pdb
+D:\teste\src\Core\SC.Domain\bin\Debug\netstandard2.0\SC.Domain.deps.json
+D:\teste\src\Core\SC.Domain\bin\Debug\netstandard2.0\SC.Domain.dll
+D:\teste\src\Core\SC.Domain\bin\Debug\netstandard2.0\SC.Domain.pdb
+D:\teste\src\Core\SC.Domain\obj\Debug\netstandard2.0\SC.Domain.csproj.CoreCompileInputs.cache
+D:\teste\src\Core\SC.Domain\obj\Debug\netstandard2.0\SC.Domain.AssemblyInfoInputs.cache
+D:\teste\src\Core\SC.Domain\obj\Debug\netstandard2.0\SC.Domain.AssemblyInfo.cs
+D:\teste\src\Core\SC.Domain\obj\Debug\netstandard2.0\SC.Domain.dll
+D:\teste\src\Core\SC.Domain\obj\Debug\netstandard2.0\SC.Domain.pdb

@@ -1,0 +1,16 @@
+/Users/jcmds/Projects/s-commerce/src/Core/SC.Application/bin/Debug/netstandard2.0/SC.Application.deps.json
+/Users/jcmds/Projects/s-commerce/src/Core/SC.Application/bin/Debug/netstandard2.0/SC.Application.dll
+/Users/jcmds/Projects/s-commerce/src/Core/SC.Application/bin/Debug/netstandard2.0/SC.Application.pdb
+/Users/jcmds/Projects/s-commerce/src/Core/SC.Application/obj/Debug/netstandard2.0/SC.Application.csproj.CoreCompileInputs.cache
+/Users/jcmds/Projects/s-commerce/src/Core/SC.Application/obj/Debug/netstandard2.0/SC.Application.AssemblyInfoInputs.cache
+/Users/jcmds/Projects/s-commerce/src/Core/SC.Application/obj/Debug/netstandard2.0/SC.Application.AssemblyInfo.cs
+/Users/jcmds/Projects/s-commerce/src/Core/SC.Application/obj/Debug/netstandard2.0/SC.Application.dll
+/Users/jcmds/Projects/s-commerce/src/Core/SC.Application/obj/Debug/netstandard2.0/SC.Application.pdb
+D:\teste\src\Core\SC.Application\bin\Debug\netstandard2.0\SC.Application.deps.json
+D:\teste\src\Core\SC.Application\bin\Debug\netstandard2.0\SC.Application.dll
+D:\teste\src\Core\SC.Application\bin\Debug\netstandard2.0\SC.Application.pdb
+D:\teste\src\Core\SC.Application\obj\Debug\netstandard2.0\SC.Application.csproj.CoreCompileInputs.cache
+D:\teste\src\Core\SC.Application\obj\Debug\netstandard2.0\SC.Application.AssemblyInfoInputs.cache
+D:\teste\src\Core\SC.Application\obj\Debug\netstandard2.0\SC.Application.AssemblyInfo.cs
+D:\teste\src\Core\SC.Application\obj\Debug\netstandard2.0\SC.Application.dll
+D:\teste\src\Core\SC.Application\obj\Debug\netstandard2.0\SC.Application.pdb
