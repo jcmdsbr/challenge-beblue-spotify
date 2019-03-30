@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using SC.Domain.ValueObjects;
 
 namespace SC.Domain.Models {
@@ -8,7 +9,8 @@ namespace SC.Domain.Models {
         public int CategoryId { get; private set; }
         public Amount Price { get; private set; }
         public Name Name { get; private set; }
-
+        public Category Category { get; private set; }
+        public List<SaleDetail> SaleDetails { get; private set; }
         protected Playlist () {
 
         }

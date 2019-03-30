@@ -21,7 +21,7 @@ namespace SC.Api {
 
             services.RegiterSwagger ();
 
-            services.RegisterServices ();
+            services.RegisterModules (Configuration);
         }
 
         public void Configure (IApplicationBuilder app, IHostingEnvironment env) {
