@@ -10,6 +10,8 @@
 
    <ItemGroup>
      <PackageReference Include="MediatR" Version="6.0.0" />
+     <PackageReference Include="SpotifyAPI.Web" Version="4.0.0" />
+     <PackageReference Include="SpotifyAPI.Web.Auth" Version="4.0.0" />
   </ItemGroup>
 
 </Project>

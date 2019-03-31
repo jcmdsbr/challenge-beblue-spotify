@@ -25,18 +25,9 @@ namespace SC.Api.UseCases.Register
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> Register(RegisterRequest request)
         {
-            try
-            {
+            var result = await _bus.Send(new RegisterNewSaleCommand());
 
-                var result = await _bus.Send(new RegisterNewSaleCommand());
-
-                return Ok(result);
-            }
-            catch (Exception e)
-            {
-
-                throw;
-            }
+            return Ok(result);
         }
     }
 }
