@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 using SC.Application.Repositories;
 using SC.Core.Commands;
 using SC.Core.Repository;
-using SC.Domain.Models;
+using SC.Domain.Entities;
 
 namespace SC.Application.CommandHandlers
 {

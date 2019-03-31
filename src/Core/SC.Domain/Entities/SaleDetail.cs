@@ -4,7 +4,7 @@ using SC.Domain.Fixed;
 using SC.Domain.Services;
 using SC.Domain.ValueObjects;
 
-namespace SC.Domain.Models
+namespace SC.Domain.Entities
 {
     public class SaleDetail : IEntity
     {

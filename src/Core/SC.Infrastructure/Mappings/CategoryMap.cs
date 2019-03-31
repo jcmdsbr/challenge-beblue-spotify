@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using SC.Domain.Models;
+using SC.Domain.Entities;
 
 namespace SC.Infrastructure.Mappings
 {

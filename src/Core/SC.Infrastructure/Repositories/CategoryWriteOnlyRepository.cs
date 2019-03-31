@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SC.Application.Repositories;
-using SC.Domain.Models;
+using SC.Domain.Entities;
 
 namespace SC.Infrastructure.Repositories
 {

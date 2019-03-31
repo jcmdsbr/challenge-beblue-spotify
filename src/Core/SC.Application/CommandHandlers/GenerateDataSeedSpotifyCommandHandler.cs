@@ -6,7 +6,7 @@ using SC.Application.Repositories;
 using SC.Core.Commands;
 using SC.Core.Repository;
 using SC.Domain.Commands.GenerateDataSeedSpotify;
-using SC.Domain.Models;
+using SC.Domain.Entities;
 using SpotifyAPI.Web;
 using SpotifyAPI.Web.Enums;
 

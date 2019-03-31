@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using SC.Core.Repository;
-using SC.Domain.Models;
+using SC.Domain.Entities;
 
 namespace SC.Application.Repositories
 {

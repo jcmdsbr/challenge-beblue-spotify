@@ -1,6 +1,6 @@
 using SC.Core.Models;
 
-namespace SC.Domain.Models
+namespace SC.Domain.Entities
 {
     public class Category : IEntity<int>
     {

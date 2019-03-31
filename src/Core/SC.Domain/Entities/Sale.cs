@@ -4,7 +4,7 @@ using System.Linq;
 using SC.Core.Models;
 using SC.Domain.ValueObjects;
 
-namespace SC.Domain.Models
+namespace SC.Domain.Entities
 {
     public class Sale : IEntity<Guid>
     {

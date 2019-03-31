@@ -1,5 +1,5 @@
 using Microsoft.EntityFrameworkCore;
-using SC.Domain.Models;
+using SC.Domain.Entities;
 using SC.Infrastructure.Mappings;
 
 namespace SC.Infrastructure
