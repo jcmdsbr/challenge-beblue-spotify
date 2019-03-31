@@ -3,28 +3,27 @@ using SC.Domain.ValueObjects;
 
 namespace SC.Domain.Services
 {
-    public class CalculateCashback : ICalculateCashbackService
+    public abstract class CalculateCashback : ICalculateCashbackService
     {
-        protected CalculateCashback(decimal fridayPercent, decimal mondayPercent,
-            decimal saturdayPercent, decimal sundayPercent, decimal thursdayPercent,
-            decimal tuesdayPercent, decimal wednesdayPercent)
+        public CalculateCashback(decimal sundayPercent, decimal mondayPercent, decimal tuesdayPercent, 
+            decimal wednesdayPercent, decimal thursdayPercent, decimal fridayPercent, decimal saturdayPercent)
         {
-            FridayPercent = fridayPercent;
-            MondayPercent = mondayPercent;
-            SaturdayPercent = saturdayPercent;
             SundayPercent = sundayPercent;
-            ThursdayPercent = thursdayPercent;
+            MondayPercent = mondayPercent;
             TuesdayPercent = tuesdayPercent;
             WednesdayPercent = wednesdayPercent;
+            ThursdayPercent = thursdayPercent;
+            FridayPercent = fridayPercent;
+            SaturdayPercent = saturdayPercent;
         }
 
-        protected decimal FridayPercent { get; }
-        protected decimal MondayPercent { get; }
-        protected decimal SaturdayPercent { get; }
         protected decimal SundayPercent { get; }
-        protected decimal ThursdayPercent { get; }
+        protected decimal MondayPercent { get; }
         protected decimal TuesdayPercent { get; }
         protected decimal WednesdayPercent { get; }
+        protected decimal ThursdayPercent { get; }
+        protected decimal FridayPercent { get; }     
+        protected decimal SaturdayPercent { get; }
 
         public decimal CalculateAmountCashback(Amount price)
         {
