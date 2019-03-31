@@ -1,4 +1,4 @@
-namespace SC.Domain.Commands.CreateNewPlaylist
+namespace SC.Domain.Commands.GenerateDataSeedSpotify
 {
     public class GenerateDataSeedSpotifyCommandResult : CommandResult
     {

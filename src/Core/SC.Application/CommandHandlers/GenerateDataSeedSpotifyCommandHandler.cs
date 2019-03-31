@@ -1,7 +1,7 @@
 using SC.Domain.Commands;
-using SC.Domain.Commands.CreateNewPlaylist;
 using System.Threading;
 using System.Threading.Tasks;
+using SC.Domain.Commands.GenerateDataSeedSpotify;
 
 namespace SC.Application.CommandHandlers
 {
