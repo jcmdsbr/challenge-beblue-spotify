@@ -21,12 +21,12 @@ namespace SC.Domain.Models
             CustomerCpf = customerCpf;
         }
 
-        public DateTime RealizedAt { get; }
-        public Amount Price { get; }
-        public Amount Cashback { get; }
-        public Cpf CustomerCpf { get; }
-        public List<SaleDetail> Details { get; }
-        public Guid Id { get; }
+        public DateTime RealizedAt { get; private set; }
+        public Amount Price { get; private set; }
+        public Amount Cashback { get; private set; }
+        public Cpf CustomerCpf { get; private set; }
+        public List<SaleDetail> Details { get; private set; }
+        public Guid Id { get; private set; }
 
         public static Sale Register(Cpf customerCpf, List<SaleDetail> details)
         {

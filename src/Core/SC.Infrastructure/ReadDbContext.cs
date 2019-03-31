@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SC.Application.Repository;
+using SC.Domain.Models;
 
 namespace SC.Infrastructure
 {

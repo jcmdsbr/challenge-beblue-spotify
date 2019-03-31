@@ -12,7 +12,7 @@ namespace SC.Domain.Models
             Description = description;
         }
 
-        public string Description { get; }
-        public int Id { get; }
+        public string Description { get; private set; }
+        public int Id { get; private set; }
     }
 }
