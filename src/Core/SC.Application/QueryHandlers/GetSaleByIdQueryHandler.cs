@@ -1,13 +1,10 @@
 ﻿using System;
-using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
 using SC.Application.Repositories;
 using SC.Core.Queries;
-using SC.Core.Repository;
-using SC.Domain.Entities;
 using SC.Domain.Queries.Models;
 using SC.Domain.Queries.Sales;
 using static System.String;
@@ -32,7 +29,7 @@ namespace SC.Application.QueryHandlers
             if (!IsNullOrEmpty(json)) return JsonConvert.DeserializeObject<SaleViewQueryModel>(json);
 
             var queryModel = await _query.GetViewQueryModelById(request.Id);
-           
+
             var cacheOptions = new DistributedCacheEntryOptions();
 
             cacheOptions.SetAbsoluteExpiration(TimeSpan.FromMinutes(2));

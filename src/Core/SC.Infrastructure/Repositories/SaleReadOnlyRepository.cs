@@ -25,11 +25,14 @@ namespace SC.Infrastructure.Repositories
                 .FirstOrDefaultAsync();
         }
 
-        public async Task<SalePagedQueryModel> GetPaged(int page, int pageSize)
+        public async Task<SalePagedQueryModel> GetPaged(int page, int pageSize, DateTime? dtInitial, DateTime? dtEnd)
         {
             var skip = (page - 1) * pageSize;
 
             var query =  BaseFullQueryNoTracking()
+                .Where(x=> !dtInitial.HasValue || x.RealizedAt >= dtInitial.Value)
+                .Where(x=> !dtEnd.HasValue || x.RealizedAt <= dtEnd.Value)
+                .OrderByDescending(x=>x.RealizedAt)
                 .Skip(skip).Take(pageSize).Select(ProjectToViewQueryModel());
 
 

@@ -5,11 +5,17 @@ namespace SC.Domain.Queries.Playlists
 {
     public class GetPlaylistsPagedQuery : IQuery<PlaylistPagedQueryModel>
     {
-        public GetPlaylistsPagedQuery()
+        public GetPlaylistsPagedQuery(int page, int pageSize, string genre)
         {
-            CacheToken = $"{nameof(GetPlaylistsPagedQuery)}";
+            Page = page;
+            PageSize = pageSize;
+            Genre = genre;
+            CacheToken = $"{nameof(GetPlaylistsPagedQuery)}?{page}&{pageSize}&{genre}";
         }
 
+        public int Page { get; }
+        public int PageSize { get; }
+        public string Genre { get; }
         public string CacheToken { get; }
     }
 }

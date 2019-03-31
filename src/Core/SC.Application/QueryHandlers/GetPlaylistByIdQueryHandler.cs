@@ -5,11 +5,8 @@ using Microsoft.Extensions.Caching.Distributed;
 using Newtonsoft.Json;
 using SC.Application.Repositories;
 using SC.Core.Queries;
-using SC.Core.Repository;
-using SC.Domain.Entities;
 using SC.Domain.Queries.Models;
 using SC.Domain.Queries.Playlists;
-
 using static System.String;
 
 namespace SC.Application.QueryHandlers

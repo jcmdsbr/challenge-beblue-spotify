@@ -9,5 +9,7 @@ namespace SC.Application.Repositories
     public interface IPlaylistReadOnlyRepository : IReadOnlyRepository<Playlist>
     {
         Task<PlaylistViewQueryModel> GetViewQueryModelById(Guid id);
+
+        Task<PlaylistPagedQueryModel> GetPaged(int page, int pageSize, string genre);
     }
 }

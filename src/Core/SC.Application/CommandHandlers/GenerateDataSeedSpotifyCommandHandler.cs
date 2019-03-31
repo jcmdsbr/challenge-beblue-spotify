@@ -13,7 +13,8 @@ using SpotifyAPI.Web.Enums;
 namespace SC.Application.CommandHandlers
 {
     public class
-        GenerateDataSeedSpotifyCommandHandler : ICommandHandler<GenerateDataSeedSpotifyCommand, GenerateDataSeedSpotifyCommandResult>
+        GenerateDataSeedSpotifyCommandHandler : ICommandHandler<GenerateDataSeedSpotifyCommand,
+            GenerateDataSeedSpotifyCommandResult>
     {
         private readonly ICategoryWriteOnlyRepository _categories;
         private readonly IPlaylistWriteOnlyRepository _persistence;
@@ -32,7 +33,7 @@ namespace SC.Application.CommandHandlers
         {
             var canMigrate = await _categories.CheckMigratePlaylistCategory();
 
-            if(!canMigrate) return new GenerateDataSeedSpotifyCommandResult();
+            if (!canMigrate) return new GenerateDataSeedSpotifyCommandResult();
 
             var categories = await _categories.GetCategoriesWithoutPlaylist();
 
@@ -42,7 +43,7 @@ namespace SC.Application.CommandHandlers
                 TokenType = "Bearer"
             };
 
-            var policy = Policy.Handle<Exception>().WaitAndRetryAsync(3, x=> TimeSpan.FromSeconds(10));
+            var policy = Policy.Handle<Exception>().WaitAndRetryAsync(3, x => TimeSpan.FromSeconds(10));
 
             var policyResult = await policy.ExecuteAndCaptureAsync(async () => await BulkInsertPlaylists());
 
@@ -55,9 +56,7 @@ namespace SC.Application.CommandHandlers
                     var result = await spotifyWebApi.SearchItemsAsync(category.Description, SearchType.Playlist, 50);
 
                     foreach (var playlist in result.Playlists.Items)
-                    {
                         await _persistence.AddAsync(Playlist.CreateNewPlaylist(category.Id, playlist.Name));
-                    }
 
                     // Bulk Insert by category
                     await _unitOfWork.Commit();

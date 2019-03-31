@@ -8,7 +8,7 @@ namespace SC.Application.Repositories
 {
     public interface ISaleReadOnlyRepository : IReadOnlyRepository<Sale>
     {
-        Task<SalePagedQueryModel> GetPaged(int page, int pageSize);
+        Task<SalePagedQueryModel> GetPaged(int page, int pageSize, DateTime? dtInitial, DateTime? dtEnd);
         Task<SaleViewQueryModel> GetViewQueryModelById(Guid id);
     }
 }
