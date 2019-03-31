@@ -2,7 +2,6 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using SC.Core.Models;
 using SC.Core.Repository;
-using SC.Domain.Models;
 
 namespace SC.Infrastructure
 {

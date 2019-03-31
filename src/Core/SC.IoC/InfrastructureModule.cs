@@ -1,9 +1,11 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using SC.Application.Repositories;
 using SC.Bus;
 using SC.Core.Repository;
 using SC.Infrastructure;
+using SC.Infrastructure.Repositories;
 
 namespace SC.IoC
 {
@@ -20,10 +22,13 @@ namespace SC.IoC
                         optionsBuilder.MigrationsAssembly(assemblyName)
                 )
             );
-            services.AddScoped(typeof(IWriteOnlyRepository<>), typeof(WriteDbContext<>));
-            services.AddScoped(typeof(IReadOnlyRepository<>), typeof(ReadDbContext<>));
+
+            services.AddScoped<ICategoryReadOnlyRepository, CategoryReadOnlyRepository>();
             services.AddScoped<IMediatorHandler, InMemoryBus>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            services.AddScoped(typeof(IWriteOnlyRepository<>), typeof(WriteDbContext<>));
+            services.AddScoped(typeof(IReadOnlyRepository<>), typeof(ReadDbContext<>));
         }
     }
 }
