@@ -20,6 +20,8 @@ namespace SC.IoC
                         optionsBuilder.MigrationsAssembly(assemblyName)
                 )
             );
+            services.AddScoped(typeof(IWriteOnlyRepository<>), typeof(WriteDbContext<>));
+            services.AddScoped(typeof(IReadOnlyRepository<>), typeof(ReadDbContext<>));
             services.AddScoped<IMediatorHandler, InMemoryBus>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
         }

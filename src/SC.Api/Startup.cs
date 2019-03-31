@@ -1,9 +1,11 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using MediatR;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using SC.Api.Middlewares;
 using SC.IoC;
+using System;
 
 namespace SC.Api
 {
@@ -20,6 +22,8 @@ namespace SC.Api
             services.RegiterSwagger();
 
             services.RegisterModules(Configuration);
+
+           
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)

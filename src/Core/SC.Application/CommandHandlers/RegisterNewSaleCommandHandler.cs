@@ -1,17 +1,17 @@
-using System;
-using System.Threading;
-using System.Threading.Tasks;
+
 using SC.Domain.Commands;
 using SC.Domain.Commands.RegisterNewSale;
+using System.Threading;
+using System.Threading.Tasks;
 
 namespace SC.Application.CommandHandlers
 {
     public class RegisterNewSaleCommandHandler : ICommandHandler<RegisterNewSaleCommand, RegisterNewSaleCommandResult>
     {
-        public Task<RegisterNewSaleCommandResult> Handle(RegisterNewSaleCommand request,
+        public async Task<RegisterNewSaleCommandResult> Handle(RegisterNewSaleCommand request,
             CancellationToken cancellationToken)
         {
-            throw new NotImplementedException();
+            return await Task.FromResult(new RegisterNewSaleCommandResult(true, "Sucesso"));
         }
     }
 }

@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
    <ItemGroup>
      <ProjectReference Include="..\SC.Domain\SC.Domain.csproj" />
@@ -9,7 +9,7 @@
   </PropertyGroup>
 
    <ItemGroup>
-    <PackageReference Include="MediatR" Version="6.0.0" />
+     <PackageReference Include="MediatR" Version="6.0.0" />
   </ItemGroup>
 
 </Project>

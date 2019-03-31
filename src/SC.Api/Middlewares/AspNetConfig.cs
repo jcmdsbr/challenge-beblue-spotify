@@ -36,6 +36,7 @@ namespace SC.Api.Middlewares {
         public static void ConfigureAspNet(this IApplicationBuilder app)
         {
             app.UseMvc();
+            app.UseHttpsRedirection();
         }
     }
 }
