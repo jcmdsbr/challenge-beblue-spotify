@@ -25,8 +25,7 @@ namespace SC.Api.Middlewares {
                     builder => builder.AllowAnyOrigin ().AllowAnyHeader ().AllowAnyMethod ());
             });
 
-            //TODO => Mover para IoC
-            services.AddTransient<IHostedService,SpotifyMigrationService>();
+            services.AddHostedService<SpotifyMigrationService>();
         }
 
         public static void ConfigureCors(this IApplicationBuilder app)
