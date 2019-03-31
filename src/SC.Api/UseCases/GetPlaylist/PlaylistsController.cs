@@ -1,6 +1,8 @@
 using Microsoft.AspNetCore.Mvc;
+using SC.Bus;
+using SC.Domain.Queries.Models;
+using SC.Domain.Queries.Playlists;
 using System;
-using System.Collections.Generic;
 using System.Net;
 using System.Threading.Tasks;
 
@@ -10,9 +12,15 @@ namespace SC.Api.UseCases.GetPlaylist
     [Route("api/[controller]")]
     public class PlaylistsController : ControllerBase
     {
+        private readonly IMediatorHandler _bus;
+
+        public PlaylistsController(IMediatorHandler bus) => _bus = bus;
+
+        
         [HttpGet("{id:guid}")]
-        [ProducesResponseType(typeof(object), (int)HttpStatusCode.OK)]
+        [ProducesResponseType(typeof(PlaylistViewQueryModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<object> Get(Guid id) => await Task.FromResult(new {});
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        public async Task<PlaylistViewQueryModel> Get(Guid id) => await _bus.Execute(new GetPlaylistByIdQuery(id));
     }
 }

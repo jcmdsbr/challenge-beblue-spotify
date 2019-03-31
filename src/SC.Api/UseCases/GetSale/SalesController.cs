@@ -1,7 +1,10 @@
 using Microsoft.AspNetCore.Mvc;
-using System.Collections.Generic;
-using System.Linq;
+using SC.Bus;
+using SC.Domain.Queries.Models;
+using SC.Domain.Queries.Sales;
+using System;
 using System.Net;
+using System.Threading.Tasks;
 
 namespace SC.Api.UseCases.GetSale
 {
@@ -9,9 +12,14 @@ namespace SC.Api.UseCases.GetSale
     [Route("api/[controller]")]
     public class SalesController : ControllerBase
     {
-        [HttpGet]
-        [ProducesResponseType(typeof(IEnumerable<int>), (int)HttpStatusCode.OK)]
+        private readonly IMediatorHandler _bus;
+
+        public SalesController(IMediatorHandler bus) => _bus = bus;
+
+        [HttpGet("{id:guid}")]
+        [ProducesResponseType(typeof(SaleViewQueryModel), (int)HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public IEnumerable<int> Get() => Enumerable.Range(1,10);
+        [ProducesResponseType((int)HttpStatusCode.InternalServerError)]
+        public async Task<SaleViewQueryModel> Get(Guid id) => await _bus.Execute(new GetSaleByIdQuery(id));
     }
 }
