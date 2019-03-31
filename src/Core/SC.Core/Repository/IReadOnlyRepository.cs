@@ -5,7 +5,7 @@ namespace SC.Core.Repository
 {
     public interface IReadOnlyRepository<TEntity>
     {
-        Task<TEntity> FindById(object id);
+        Task<TEntity> GetViewQueryModelById(object id);
         Task<IReadOnlyCollection<TEntity>> List();
     }
 }

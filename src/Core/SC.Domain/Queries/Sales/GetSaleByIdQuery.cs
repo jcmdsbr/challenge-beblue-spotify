@@ -9,8 +9,10 @@ namespace SC.Domain.Queries.Sales
         public GetSaleByIdQuery(Guid id)
         {
             Id = id;
+            CacheToken = $"{nameof(GetSaleByIdQuery)}_{id}";
         }
 
         public Guid Id { get; }
+        public string CacheToken { get; }
     }
 }

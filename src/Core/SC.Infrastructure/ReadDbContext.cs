@@ -8,18 +8,18 @@ namespace SC.Infrastructure
 {
     public class ReadDbContext<TEntity> : IReadOnlyRepository<TEntity> where TEntity : class, IEntity
     {
-        protected readonly DbSet<TEntity> DbSet;
+        protected readonly DbSet<TEntity> Query;
 
-        public ReadDbContext(SCContext db) => DbSet = db.Set<TEntity>();
+        public ReadDbContext(SCContext db) => Query = db.Set<TEntity>();
 
-        public virtual async Task<TEntity> FindById(object id)
+        public virtual async Task<TEntity> GetViewQueryModelById(object id)
         {
-            return await DbSet.FindAsync(id);
+            return await Query.FindAsync(id);
         }
 
         public virtual async Task<IReadOnlyCollection<TEntity>> List()
         {
-            return await DbSet.AsNoTracking().ToListAsync();
+            return await Query.AsNoTracking().ToListAsync();
         }
     }
 }

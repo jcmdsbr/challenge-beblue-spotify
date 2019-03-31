@@ -16,7 +16,7 @@ namespace SC.Infrastructure.Repositories
 
         public async Task<List<Playlist>> ListBy(IReadOnlyCollection<Guid> requestPlaylists)
         {
-            return await DbSet.Where(x => requestPlaylists.Contains(x.Id)).ToListAsync();
+            return await Session.Where(x => requestPlaylists.Contains(x.Id)).ToListAsync();
         }
     }
 }

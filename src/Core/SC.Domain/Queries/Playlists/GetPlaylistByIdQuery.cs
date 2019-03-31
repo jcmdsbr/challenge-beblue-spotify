@@ -9,8 +9,10 @@ namespace SC.Domain.Queries.Playlists
         public GetPlaylistByIdQuery(Guid id)
         {
             Id = id;
+            CacheToken = $"{nameof(GetPlaylistByIdQuery)}_{id}";
         }
 
         public Guid Id { get; }
+        public string CacheToken { get; }
     }
 }

@@ -23,8 +23,18 @@ namespace SC.IoC
                 )
             );
 
+            services.AddDistributedRedisCache(options =>
+            {
+                options.Configuration =
+                    configuration.GetConnectionString("RedisConnection");
+                options.InstanceName = "SPOTIFYCOMMERCE";
+            });
+
             services.AddScoped<ICategoryWriteOnlyRepository, CategoryWriteOnlyRepository>();
             services.AddScoped<IPlaylistWriteOnlyRepository, PlaylistWriteOnlyRepository>();
+
+            services.AddScoped<IPlaylistReadOnlyRepository, PlaylistReadOnlyRepository>();
+            services.AddScoped<ISaleReadOnlyRepository, SaleReadOnlyRepository>();
 
             services.AddScoped<IMediatorHandler, InMemoryBus>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();

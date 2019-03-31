@@ -7,7 +7,10 @@ namespace SC.Infrastructure
     {
         private readonly SCContext _context;
 
-        public UnitOfWork(SCContext context) => _context = context;
+        public UnitOfWork(SCContext context)
+        {
+            _context = context;
+        }
 
         public async Task<bool> Commit()
         {
