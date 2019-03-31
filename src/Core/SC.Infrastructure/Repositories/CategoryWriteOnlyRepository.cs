@@ -9,11 +9,11 @@ using SC.Domain.Models;
 
 namespace SC.Infrastructure.Repositories
 {
-    public class CategoryReadOnlyRepository : ReadDbContext<Category>, ICategoryReadOnlyRepository
+    public class CategoryWriteOnlyRepository : WriteDbContext<Category>, ICategoryWriteOnlyRepository
     {
-        private DbSet<Playlist> _playlists;
+        private readonly DbSet<Playlist> _playlists;
 
-        public CategoryReadOnlyRepository(SCContext db) : base(db)
+        public CategoryWriteOnlyRepository(SCContext db) : base(db)
         {
             _playlists = db.Playlists;
         }

@@ -9,9 +9,13 @@ namespace SC.Application.CommandHandlers
 {
     public class RegisterNewSaleCommandHandler : ICommandHandler<RegisterNewSaleCommand, RegisterNewSaleCommandResult>
     {
+        
         public async Task<RegisterNewSaleCommandResult> Handle(RegisterNewSaleCommand request,
             CancellationToken cancellationToken)
         {
+
+
+
             return await Task.FromResult(new RegisterNewSaleCommandResult(true, "Sucesso"));
         }
     }

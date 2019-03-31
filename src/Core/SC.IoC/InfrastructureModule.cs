@@ -23,7 +23,7 @@ namespace SC.IoC
                 )
             );
 
-            services.AddScoped<ICategoryReadOnlyRepository, CategoryReadOnlyRepository>();
+            services.AddScoped<ICategoryWriteOnlyRepository, CategoryWriteOnlyRepository>();
             services.AddScoped<IMediatorHandler, InMemoryBus>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 

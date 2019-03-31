@@ -5,7 +5,7 @@ using SC.Domain.Models;
 
 namespace SC.Application.Repositories
 {
-    public interface ICategoryReadOnlyRepository : IReadOnlyRepository<Category>
+    public interface ICategoryWriteOnlyRepository : IWriteOnlyRepository<Category>
     {
         Task<bool> CheckMigratePlaylistCategory();
         Task<Stack<Category>> GetCategoriesWithoutPlaylist();

@@ -25,7 +25,7 @@ namespace SC.Api.UseCases.Register
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
         public async Task<IActionResult> Register(RegisterRequest request)
         {
-            var result = await _bus.Send(new RegisterNewSaleCommand());
+            var result = await _bus.Send(new RegisterNewSaleCommand(request.Playlists, request.CustomerCpf));
 
             return Ok(result);
         }
