@@ -15,9 +15,6 @@ namespace SC.Core.Queries
     {
         public IReadOnlyCollection<T> Results { get; set; }
 
-        public PagedResult(IEnumerable<T> results)
-        {
-            Results = results.ToList();
-        }
+        public PagedResult(IEnumerable<T> results) => Results = results.ToList();
     }
 }

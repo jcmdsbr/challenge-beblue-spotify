@@ -35,7 +35,7 @@ namespace SC.Application.QueryHandlers
 
             cacheOptions.SetAbsoluteExpiration(TimeSpan.FromMinutes(2));
 
-            _cache.SetString(request.CacheToken, JsonConvert.SerializeObject(queryModel), cacheOptions);
+           await _cache.SetStringAsync(request.CacheToken, JsonConvert.SerializeObject(queryModel), cacheOptions);
 
             return queryModel;
         }

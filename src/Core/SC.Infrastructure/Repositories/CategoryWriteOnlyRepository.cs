@@ -11,10 +11,7 @@ namespace SC.Infrastructure.Repositories
     {
         private readonly DbSet<Playlist> _playlists;
 
-        public CategoryWriteOnlyRepository(SCContext db) : base(db)
-        {
-            _playlists = db.Playlists;
-        }
+        public CategoryWriteOnlyRepository(SCContext db) : base(db) => _playlists = db.Playlists;
 
         public async Task<bool> CheckMigratePlaylistCategory()
         {

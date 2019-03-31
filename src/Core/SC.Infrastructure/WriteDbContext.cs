@@ -9,10 +9,7 @@ namespace SC.Infrastructure
     {
         protected readonly DbSet<TEntity> Session;
 
-        public WriteDbContext(SCContext db)
-        {
-            Session = db.Set<TEntity>();
-        }
+        public WriteDbContext(SCContext db) => Session = db.Set<TEntity>();
 
         public virtual async Task AddAsync(TEntity entity)
         {

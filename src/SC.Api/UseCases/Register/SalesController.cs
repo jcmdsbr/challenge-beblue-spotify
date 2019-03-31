@@ -15,10 +15,7 @@ namespace SC.Api.UseCases.Register
     {
         private readonly IMediatorHandler _bus;
 
-        public SalesController(IMediatorHandler bus)
-        {
-            _bus = bus;
-        }
+        public SalesController(IMediatorHandler bus) => _bus = bus;
 
         [HttpPost]
         [ProducesResponseType(typeof(object), (int)HttpStatusCode.OK)]
