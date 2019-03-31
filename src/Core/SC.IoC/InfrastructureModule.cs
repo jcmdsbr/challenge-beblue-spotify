@@ -24,6 +24,8 @@ namespace SC.IoC
             );
 
             services.AddScoped<ICategoryWriteOnlyRepository, CategoryWriteOnlyRepository>();
+            services.AddScoped<IPlaylistWriteOnlyRepository, PlaylistWriteOnlyRepository>();
+
             services.AddScoped<IMediatorHandler, InMemoryBus>();
             services.AddScoped<IUnitOfWork, UnitOfWork>();
 

@@ -10,6 +10,11 @@ namespace SC.Domain.Commands.RegisterNewSale
             Message = message;
         }
 
+        public RegisterNewSaleCommandResult(string message) : this(true, message)
+        {
+
+        }
+
         public string Message { get; }
     }
 }

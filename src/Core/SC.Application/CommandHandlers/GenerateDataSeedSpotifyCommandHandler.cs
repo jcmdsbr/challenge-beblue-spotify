@@ -16,11 +16,11 @@ namespace SC.Application.CommandHandlers
         GenerateDataSeedSpotifyCommandHandler : ICommandHandler<GenerateDataSeedSpotifyCommand, GenerateDataSeedSpotifyCommandResult>
     {
         private readonly ICategoryWriteOnlyRepository _categories;
-        private readonly IWriteOnlyRepository<Playlist> _persistence;
+        private readonly IPlaylistWriteOnlyRepository _persistence;
         private readonly IUnitOfWork _unitOfWork;
 
         public GenerateDataSeedSpotifyCommandHandler(ICategoryWriteOnlyRepository categories,
-            IWriteOnlyRepository<Playlist> persistence, IUnitOfWork unitOfWork)
+            IPlaylistWriteOnlyRepository persistence, IUnitOfWork unitOfWork)
         {
             _categories = categories;
             _persistence = persistence;

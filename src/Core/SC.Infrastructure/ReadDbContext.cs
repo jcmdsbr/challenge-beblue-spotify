@@ -19,7 +19,7 @@ namespace SC.Infrastructure
 
         public virtual async Task<IReadOnlyCollection<TEntity>> List()
         {
-            return await DbSet.ToListAsync();
+            return await DbSet.AsNoTracking().ToListAsync();
         }
     }
 }
