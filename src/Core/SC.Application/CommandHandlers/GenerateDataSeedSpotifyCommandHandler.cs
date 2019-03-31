@@ -1,6 +1,7 @@
 using SC.Domain.Commands;
 using System.Threading;
 using System.Threading.Tasks;
+using SC.Core.Commands;
 using SC.Domain.Commands.GenerateDataSeedSpotify;
 using SpotifyAPI.Web;
 

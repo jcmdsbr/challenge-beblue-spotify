@@ -1,3 +1,5 @@
+using SC.Core.ValueObjects;
+
 namespace SC.Domain.ValueObjects
 {
     public class Name : ValueObject<Name>

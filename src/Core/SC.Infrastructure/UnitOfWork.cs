@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-using SC.Application.Repository;
+using SC.Core.Repository;
 
 namespace SC.Infrastructure
 {

@@ -1,4 +1,5 @@
 using System;
+using SC.Core.ValueObjects;
 
 namespace SC.Domain.ValueObjects
 {

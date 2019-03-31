@@ -1,4 +1,5 @@
 using System;
+using SC.Core.Models;
 using SC.Domain.ValueObjects;
 
 namespace SC.Domain.Models

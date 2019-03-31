@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace SC.Domain.Queries
+namespace SC.Core.Queries
 {
     public interface IQueryHandler<in TQuery, TResult> : IRequestHandler<TQuery, TResult>
         where TQuery : IQuery<TResult>

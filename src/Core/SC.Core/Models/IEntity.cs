@@ -1,4 +1,4 @@
-namespace SC.Domain.Models
+namespace SC.Core.Models
 {
     public interface IEntity<out T> : IEntity where T : struct
     {

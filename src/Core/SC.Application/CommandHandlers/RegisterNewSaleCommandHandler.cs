@@ -3,6 +3,7 @@ using SC.Domain.Commands;
 using SC.Domain.Commands.RegisterNewSale;
 using System.Threading;
 using System.Threading.Tasks;
+using SC.Core.Commands;
 
 namespace SC.Application.CommandHandlers
 {

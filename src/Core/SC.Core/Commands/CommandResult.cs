@@ -1,6 +1,6 @@
 using System;
 
-namespace SC.Domain.Commands
+namespace SC.Core.Commands
 {
     public abstract class CommandResult : ICommandResult
     {

@@ -1,4 +1,4 @@
-namespace SC.Domain.ValueObjects
+namespace SC.Core.ValueObjects
 {
     public abstract class ValueObject<T>
         where T : ValueObject<T>

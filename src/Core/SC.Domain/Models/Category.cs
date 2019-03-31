@@ -1,3 +1,5 @@
+using SC.Core.Models;
+
 namespace SC.Domain.Models
 {
     public class Category : IEntity<int>

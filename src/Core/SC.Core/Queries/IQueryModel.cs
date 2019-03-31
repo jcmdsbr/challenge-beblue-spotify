@@ -1,4 +1,4 @@
-namespace SC.Domain.Queries
+namespace SC.Core.Queries
 {
     public interface IQueryModel
     {

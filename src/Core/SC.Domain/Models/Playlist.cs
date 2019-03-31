@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using SC.Core.Models;
 using SC.Domain.ValueObjects;
 
 namespace SC.Domain.Models

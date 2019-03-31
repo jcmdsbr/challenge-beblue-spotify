@@ -1,8 +1,8 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
-using SC.Application.Repository;
 using SC.Bus;
+using SC.Core.Repository;
 using SC.Infrastructure;
 
 namespace SC.IoC

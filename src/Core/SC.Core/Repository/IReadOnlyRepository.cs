@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
-namespace SC.Application.Repository
+namespace SC.Core.Repository
 {
     public interface IReadOnlyRepository<TEntity>
     {

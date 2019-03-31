@@ -1,4 +1,5 @@
 using System.Globalization;
+using SC.Core.ValueObjects;
 
 namespace SC.Domain.ValueObjects
 {
@@ -26,9 +27,7 @@ namespace SC.Domain.ValueObjects
 
         public static implicit operator decimal(Amount amount)
         {
-            if (amount is null) return default;
-
-            return amount.Value;
+            return amount?.Value ?? default;
         }
 
         public static implicit operator Amount(decimal value)

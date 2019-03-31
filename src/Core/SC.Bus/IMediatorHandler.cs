@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
+using SC.Core.Commands;
+using SC.Core.Queries;
 using SC.Domain.Commands;
-using SC.Domain.Queries;
 
 namespace SC.Bus
 {

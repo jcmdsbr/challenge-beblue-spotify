@@ -1,6 +1,6 @@
 using MediatR;
 
-namespace SC.Domain.Commands
+namespace SC.Core.Commands
 {
     public interface ICommand<out TResult> : IRequest<TResult>
         where TResult : ICommandResult

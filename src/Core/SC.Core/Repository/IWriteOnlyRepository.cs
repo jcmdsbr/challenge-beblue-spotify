@@ -1,7 +1,7 @@
 using System.Threading.Tasks;
-using SC.Domain.Models;
+using SC.Core.Models;
 
-namespace SC.Application.Repository
+namespace SC.Core.Repository
 {
     public interface IWriteOnlyRepository<TEntity> where TEntity : IEntity
     {
