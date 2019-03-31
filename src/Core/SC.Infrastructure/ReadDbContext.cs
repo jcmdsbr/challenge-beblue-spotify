@@ -10,10 +10,7 @@ namespace SC.Infrastructure
     {
         private readonly DbSet<TEntity> _dbSet;
 
-        public ReadDbContext(SCContext db)
-        {
-            _dbSet = db.Set<TEntity>();
-        }
+        public ReadDbContext(SCContext db) => _dbSet = db.Set<TEntity>();
 
         public virtual async Task<TEntity> FindById(object id)
         {

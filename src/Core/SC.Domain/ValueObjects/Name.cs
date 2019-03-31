@@ -6,12 +6,9 @@ namespace SC.Domain.ValueObjects
         {
         }
 
-        public Name(string value)
-        {
-            Value = value;
-        }
+        public Name(string value) => Value = value;
 
-        public string Value { get; }
+        public string Value { get; private set; }
 
         public override string ToString()
         {

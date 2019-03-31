@@ -9,10 +9,7 @@ namespace SC.Bus
     {
         private readonly IMediator _mediator;
 
-        public InMemoryBus(IMediator mediator)
-        {
-            _mediator = mediator;
-        }
+        public InMemoryBus(IMediator mediator) => _mediator = mediator;
 
         public Task<T> Send<T>(ICommand<T> command) where T : ICommandResult
         {

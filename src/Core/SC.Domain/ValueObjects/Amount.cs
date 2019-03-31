@@ -8,17 +8,11 @@ namespace SC.Domain.ValueObjects
         {
         }
 
-        public Amount(decimal value)
-        {
-            Value = value;
-        }
+        public Amount(decimal value) => Value = value;
 
-        private Amount(string value)
-        {
-            Value = decimal.Parse(value, NumberStyles.Currency, CultureInfo.InvariantCulture);
-        }
+        private Amount(string value) => Value = decimal.Parse(value, NumberStyles.Currency, CultureInfo.InvariantCulture);
 
-        public decimal Value { get; }
+        public decimal Value { get; private set; }
 
         public override string ToString()
         {
@@ -32,7 +26,7 @@ namespace SC.Domain.ValueObjects
 
         public static implicit operator decimal(Amount amount)
         {
-            if (amount is null) return default(decimal);
+            if (amount is null) return default;
 
             return amount.Value;
         }

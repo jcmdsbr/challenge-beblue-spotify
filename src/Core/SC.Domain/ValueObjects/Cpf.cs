@@ -14,11 +14,11 @@ namespace SC.Domain.ValueObjects
             Value = Convert.ToDecimal(valueFormt);
         }
 
-        public decimal Value { get; }
+        public decimal Value { get; private set; }
 
         public override string ToString()
         {
-            return string.Format(@"000\.000\.000\-00", Value);
+            return $@"000\.000\.000\-00";
         }
 
         public static Cpf Create(string value)

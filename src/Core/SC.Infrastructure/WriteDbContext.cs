@@ -9,10 +9,7 @@ namespace SC.Infrastructure
     {
         protected readonly DbSet<TEntity> DbSet;
 
-        public WriteDbContext(SCContext db)
-        {
-            DbSet = db.Set<TEntity>();
-        }
+        public WriteDbContext(SCContext db) => DbSet = db.Set<TEntity>();
 
         public virtual async Task AddAsync(TEntity entity)
         {
