@@ -1,4 +1,4 @@
-using SC.Core.Models;
+using SC.Core.Entities;
 
 namespace SC.Domain.Entities
 {

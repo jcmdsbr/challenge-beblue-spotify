@@ -1,5 +1,5 @@
 using System.Threading.Tasks;
-using SC.Core.Models;
+using SC.Core.Entities;
 
 namespace SC.Core.Repository
 {

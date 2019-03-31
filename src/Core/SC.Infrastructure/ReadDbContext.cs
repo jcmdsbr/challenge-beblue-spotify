@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using SC.Core.Models;
+using SC.Core.Entities;
 using SC.Core.Repository;
 
 namespace SC.Infrastructure

@@ -1,5 +1,5 @@
 using System;
-using SC.Core.Models;
+using SC.Core.Entities;
 using SC.Domain.Fixed;
 using SC.Domain.Services;
 using SC.Domain.ValueObjects;
