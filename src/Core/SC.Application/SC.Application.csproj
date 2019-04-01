@@ -11,7 +11,8 @@
 
    <ItemGroup>
      <PackageReference Include="MediatR" Version="6.0.0" />
-     <PackageReference Include="Microsoft.Extensions.Caching.Redis.Core" Version="1.0.3" />
+     <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="2.1.1" />
+     <PackageReference Include="Microsoft.Extensions.Caching.Redis" Version="2.1.1" />
      <PackageReference Include="Polly" Version="7.1.0" />
      <PackageReference Include="SpotifyAPI.Web" Version="4.0.0" />
      <PackageReference Include="SpotifyAPI.Web.Auth" Version="4.0.0" />
