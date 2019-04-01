@@ -30,8 +30,8 @@ namespace SC.Infrastructure.Repositories
             var skip = (page - 1) * pageSize;
 
             var query =  BaseFullQueryNoTracking()
-                .Where(x=> !dtInitial.HasValue || x.RealizedAt >= dtInitial.Value)
-                .Where(x=> !dtEnd.HasValue || x.RealizedAt <= dtEnd.Value)
+                .Where(x=> dtInitial == null || x.RealizedAt.Date >= dtInitial.Value.Date)
+                .Where(x=> dtEnd == null || x.RealizedAt.Date <= dtEnd.Value.Date)
                 .OrderByDescending(x=>x.RealizedAt)
                 .Skip(skip).Take(pageSize).Select(ProjectToViewQueryModel());
 

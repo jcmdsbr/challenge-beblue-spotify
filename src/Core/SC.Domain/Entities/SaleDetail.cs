@@ -18,14 +18,15 @@ namespace SC.Domain.Entities
         public Playlist Playlist { get; private set; }
         public Sale Sale { get; private set; }
 
-        public static SaleDetail Create(Guid playlistId, Amount price, int categoryId)
+        public static SaleDetail CreateByPlaylist(Playlist playlist)
         {
-            var cashback = CalculateCashback(price, (EnmCategory) categoryId);
+            var cashback = CalculateCashback(playlist.Price, (EnmCategory) playlist.CategoryId);
 
             return new SaleDetail
             {
-                PlaylistId = playlistId,
-                Cashback = cashback
+                PlaylistId = playlist.Id,
+                Cashback = cashback,
+                Playlist = playlist
             };
 
         }

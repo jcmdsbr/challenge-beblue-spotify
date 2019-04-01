@@ -12,7 +12,7 @@ namespace SC.Domain.Entities
         {
         }
 
-        private Sale(Cpf customerCpf, IEnumerable<SaleDetail> details)
+        private Sale(Cpf customerCpf, List<SaleDetail> details)
         {
             Id = Guid.NewGuid();
             RealizedAt = DateTime.Now;
@@ -26,10 +26,10 @@ namespace SC.Domain.Entities
         public Amount Price { get; private set; }
         public Amount Cashback { get; private set; }
         public Cpf CustomerCpf { get; private set; }
-        public IEnumerable<SaleDetail> Details { get; private set; }
+        public List<SaleDetail> Details { get; private set; }
         public Guid Id { get; private set; }
 
-        public static Sale Register(Cpf customerCpf, IEnumerable<SaleDetail> details)
+        public static Sale Register(Cpf customerCpf, List<SaleDetail> details)
         {
             return new Sale(customerCpf, details);
         }

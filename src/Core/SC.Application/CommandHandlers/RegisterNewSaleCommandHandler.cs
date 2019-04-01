@@ -29,9 +29,9 @@ namespace SC.Application.CommandHandlers
             var shopCar = await _playlistWriteOnlyRepository.ListBy(request.Playlists);
 
             var details =
-                shopCar.Select(playlist => SaleDetail.Create(playlist.Id, playlist.Price, playlist.CategoryId));
+                shopCar.Select(playlist => SaleDetail.CreateByPlaylist(playlist));
 
-            var register = Sale.Register(request.CustomerCpf, details);
+            var register = Sale.Register(request.CustomerCpf, details.ToList());
 
             await _persistence.AddAsync(register);
             await _unitOfWork.Commit();
