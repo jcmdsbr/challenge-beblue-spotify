@@ -22,7 +22,7 @@ namespace SC.Infrastructure.Mappings
             {
                 x.Property(s => s.Value)
                     .HasColumnName("Name")
-                    .HasColumnType("varchar(50)")
+                    .HasColumnType("varchar(200)")
                     .HasMaxLength(50);
             });
 

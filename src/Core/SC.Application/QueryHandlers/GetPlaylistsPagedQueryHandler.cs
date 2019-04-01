@@ -9,35 +9,32 @@ using SC.Domain.Queries.Models;
 using SC.Domain.Queries.Playlists;
 using static System.String;
 
-namespace SC.Application.QueryHandlers
-{
-    public class GetPlaylistsPagedQueryHandler : IQueryHandler<GetPlaylistsPagedQuery, PlaylistPagedQueryModel>
-    {
+namespace SC.Application.QueryHandlers {
+    public class GetPlaylistsPagedQueryHandler : IQueryHandler<GetPlaylistsPagedQuery, PlaylistPagedQueryModel> {
         private readonly IDistributedCache _cache;
         private readonly IPlaylistReadOnlyRepository _query;
 
-        public GetPlaylistsPagedQueryHandler(IDistributedCache cache, IPlaylistReadOnlyRepository query)
-        {
+        public GetPlaylistsPagedQueryHandler (IDistributedCache cache, IPlaylistReadOnlyRepository query) {
             _cache = cache;
             _query = query;
         }
 
-        public async Task<PlaylistPagedQueryModel> Handle(GetPlaylistsPagedQuery request,
-            CancellationToken cancellationToken)
-        {
-            var json = await _cache.GetStringAsync(request.CacheToken);
+        public async Task<PlaylistPagedQueryModel> Handle (GetPlaylistsPagedQuery request,
+            CancellationToken cancellationToken) {
+                
+            var json =  await _cache.GetStringAsync(request.CacheToken);
 
-            if (!IsNullOrEmpty(json)) return JsonConvert.DeserializeObject<PlaylistPagedQueryModel>(json);
+                if (!IsNullOrEmpty (json)) return JsonConvert.DeserializeObject<PlaylistPagedQueryModel> (json);
 
-            var queryModel = await _query.GetPaged(request.Page, request.PageSize, request.Genre);
+                var queryModel = await _query.GetPaged (request.Page, request.PageSize, request.Genre);
 
-            var cacheOptions = new DistributedCacheEntryOptions();
+                var cacheOptions = new DistributedCacheEntryOptions ();
 
-            cacheOptions.SetAbsoluteExpiration(TimeSpan.FromMinutes(2));
+                cacheOptions.SetAbsoluteExpiration (TimeSpan.FromMinutes (2));
 
-            await _cache.SetStringAsync(request.CacheToken, JsonConvert.SerializeObject(queryModel), cacheOptions);
+                await _cache.SetStringAsync (request.CacheToken, JsonConvert.SerializeObject (queryModel), cacheOptions);
 
-            return queryModel;
+                return queryModel;
         }
     }
 }

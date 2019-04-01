@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SC.Infrastructure;
 
 namespace SC.Infrastructure.Migrations
 {
     [DbContext(typeof(SCContext))]
-    partial class SCContextModelSnapshot : ModelSnapshot
+    [Migration("20190401214400_HotFixPlaylistNameTruncated")]
+    partial class HotFixPlaylistNameTruncated
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
