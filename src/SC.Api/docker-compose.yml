@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  sql:
+    image: "microsoft/mssql-server-linux:latest"
+    ports:
+      - "1433:1433"
+    environment:
+      SA_PASSWORD: "@jeanN3550!"
+      ACCEPT_EULA: "Y"
+  redis:
+    image: redis
+    ports:
+      - "16379:6379"
