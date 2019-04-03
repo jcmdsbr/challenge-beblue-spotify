@@ -22,8 +22,8 @@ vinil e calcular o valor de cashback para o cliente.
 
 ## Casos de Uso:
 
-[GET] - GetPlaylist => Obtém os dados de uma playlist (Disco) através do seu identificador.
-[GET] - GetPlaylists => Consulta paginada de playlists (Discos).
-[GET] - GetSale => Obtém os dados de uma venda atavés do seu identificador.
-[GET] - GetSales => Consulta paginada das vendas.
-[POST] - Register => Cadastra uma venda.
+* [GET] - GetPlaylist => Obtém os dados de uma playlist (Disco) através do seu identificador.
+* [GET] - GetPlaylists => Consulta paginada de playlists (Discos).
+* [GET] - GetSale => Obtém os dados de uma venda atavés do seu identificador.
+* [GET] - GetSales => Consulta paginada das vendas.
+* [POST] - Register => Cadastra uma venda.
