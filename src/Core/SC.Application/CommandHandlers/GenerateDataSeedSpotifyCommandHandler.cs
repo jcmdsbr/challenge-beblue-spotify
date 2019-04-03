@@ -31,6 +31,8 @@ namespace SC.Application.CommandHandlers
         public async Task<GenerateDataSeedSpotifyCommandResult> Handle(GenerateDataSeedSpotifyCommand request,
             CancellationToken cancellationToken)
         {
+             var policy = Policy.Handle<Exception>().WaitAndRetryAsync(3, x => TimeSpan.FromSeconds(10));
+             
             var canMigrate = await _categories.CheckMigratePlaylistCategory();
 
             if (!canMigrate) return new GenerateDataSeedSpotifyCommandResult();
@@ -42,8 +44,6 @@ namespace SC.Application.CommandHandlers
                 AccessToken = request.SpotifyToken,
                 TokenType = "Bearer"
             };
-
-            var policy = Policy.Handle<Exception>().WaitAndRetryAsync(3, x => TimeSpan.FromSeconds(10));
 
             var policyResult = await policy.ExecuteAndCaptureAsync(async () => await BulkInsertPlaylists());
 
@@ -65,9 +65,7 @@ namespace SC.Application.CommandHandlers
                     categories.Pop();
                 }
             }
-
-            var hasSuccess = policyResult.ExceptionType is null;
-
+            var hasSuccess = !policyResult.ExceptionType.HasValue;
             return new GenerateDataSeedSpotifyCommandResult(hasSuccess);
         }
     }
