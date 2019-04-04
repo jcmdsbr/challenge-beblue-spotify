@@ -17,6 +17,8 @@ vinil e calcular o valor de cashback para o cliente.
 * Acesse o site [Developer Spotify](https://developer.spotify.com/console/get-search-item/) clique em GET TOKEN/REQUEST TOKEN, informe seu usuario e senha.
 * Acesse o arquivo de configuração (appsettings.json) localizado em "~/src/SC.Api" e altere a propriedade "SpotifyToken" pelo fornecido no passo anterior.
 
+* ### Agora a aplicação está devidamente configurada, basta executa-la através de sua IDE de preferência.
+
 ## Casos de Uso:
 
 * [GET] - GetPlaylist => Obtém os dados de uma playlist (Disco) através do seu identificador.
@@ -26,4 +28,5 @@ vinil e calcular o valor de cashback para o cliente.
 * [POST] - Register => Cadastra uma venda.
 
 ## Obs:
-* Todas as funcionalidades podem ser acessadas via Swagger através do link https://localhost:{port}/swagger/index.html
+* ### Todas as funcionalidades podem ser acessadas via Swagger através do link:
+  ### https://localhost:{port}/swagger/index.html
