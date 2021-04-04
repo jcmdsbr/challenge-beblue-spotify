@@ -1,15 +1,20 @@
-# O "Spotify Commerce" é um projeto criado com a proposta de solucionar um desafio técnico:
-* Desenvolver um serviço de back-end (API'S REST) que será responsável por efetuar vendas de discos de
+# Projeto criado com a proposta de solucionar um desafio técnico :sunglasses:
+
+- Desenvolver um serviço de back-end (API'S REST) que será responsável por efetuar vendas de discos de
 vinil e calcular o valor de cashback para o cliente.
 
-## Você vai precisar das seguites ferramentas:
+## Estrelinha! :star:
+
+Se esse projeto te ajudou em alguma coisa, taquele pau na estrelinha \o/
+
+## Você vai precisar das seguites ferramentas :exclamation:
 
 * Visual Studio Code / Visual Studio 2017 +
 * Docker (Containers linux)
 * .Net Core 2.1 +
 * Conta de acesso ao serviço Spotify (Paga ou Gratuita)
 
-## Passo a passo da configuração:
+## Passo a passo da configuração 🏗️
 
 * Clone o projeto através do comando "git clone https://github.com/jcmds/s-commerce.git"
 * Navegue até a pasta ~/src e execute o comando "docker-compose up -d" para subir os container do sql server e redis
@@ -19,7 +24,7 @@ vinil e calcular o valor de cashback para o cliente.
 
 * ### Agora a aplicação está devidamente configurada, basta executa-la através de sua IDE de preferência.
 
-## Casos de Uso:
+## Casos de Uso 📖
 
 * [GET] - GetPlaylist => Obtém os dados de uma playlist (Disco) através do seu identificador.
 * [GET] - GetPlaylists => Consulta paginada de playlists (Discos).
@@ -27,6 +32,6 @@ vinil e calcular o valor de cashback para o cliente.
 * [GET] - GetSales => Consulta paginada das vendas.
 * [POST] - Register => Cadastra uma venda.
 
-## Obs:
+## Obs ❗
 * ### Todas as funcionalidades podem ser acessadas via Swagger através do link:
   ### https://localhost:{port}/swagger/index.html
