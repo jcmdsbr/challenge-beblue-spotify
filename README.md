@@ -1,4 +1,4 @@
-# Projeto criado com a proposta de solucionar um desafio técnico :sunglasses:
+# Projeto criado para o desafio técnico da BeBlue :sunglasses:
 
 - Desenvolver um serviço de back-end (API'S REST) que será responsável por efetuar vendas de discos de
 vinil e calcular o valor de cashback para o cliente.
